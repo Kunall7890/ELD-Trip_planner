@@ -8,7 +8,7 @@ export default function EldLogsView({ logs }) {
   const downloadTimerRef = useRef(null);
 
   if (!logs || logs.length === 0) {
-    return <p style={{ color: 'var(--text-muted)' }}>No log data available.</p>;
+    return <p style={{ color: 'var(--text-muted)' }}><em>No log data available.</em></p>;
   }
 
   const handleDownloadAll = useCallback(() => {
@@ -52,13 +52,13 @@ export default function EldLogsView({ logs }) {
       </div>
 
       <div className="log-content">
-        <h2>Day {activeDay + 1} — {logs[activeDay].date}</h2>
+        <h2><strong>Day {activeDay + 1}</strong> <span className="em">— {logs[activeDay].date}</span></h2>
         <div ref={setCanvasRef(activeDay)}>
           <EldLogSheet eldDay={logs[activeDay]} dayIndex={activeDay + 1} />
         </div>
         {logs.length > 1 && (
           <button className="download-all-btn" onClick={handleDownloadAll}>
-            Download All Log Sheets ({logs.length})
+            <strong>Download</strong> <span className="em">All Log Sheets</span> ({logs.length})
           </button>
         )}
       </div>

@@ -46,7 +46,7 @@ export default function RouteInstructions({ trip, logs, stops }) {
         {logs.map((day, dayIdx) => (
           <div key={dayIdx}>
             <div className="instruction-day-header">
-              Day {dayIdx + 1} — {day.date} ({day.total_driving_hours} hrs driving)
+              <strong>Day {dayIdx + 1}</strong> <span className="em">— {day.date}</span> <span className="value">({day.total_driving_hours} hrs driving)</span>
             </div>
             {day.segments.map((seg, segIdx) => (
               <div className="instruction-item" key={segIdx}>
@@ -68,7 +68,7 @@ export default function RouteInstructions({ trip, logs, stops }) {
       {stops && stops.length > 0 && (
         <div style={{ marginTop: 20 }}>
           <div style={{ fontSize: '0.875rem', fontWeight: 600, marginBottom: 8, color: 'var(--text-muted)' }}>
-            Stops & Breaks
+            <strong>Stops</strong> <span className="em">& Breaks</span>
           </div>
           <div className="stops-bar">
             {stops.map((stop, idx) => (

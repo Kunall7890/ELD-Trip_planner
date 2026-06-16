@@ -37,7 +37,9 @@ export default function Navbar() {
         </Link>
 
         <div className={`navbar-links${menuOpen ? ' open' : ''}`}>
-          <Link to="/" onClick={closeMenu}>Home</Link>
+          <Link to="/" onClick={closeMenu}><strong>Home</strong></Link>
+          <a href="#features" onClick={closeMenu}><span className="em">Features</span></a>
+          <Link to="/plan" className="navbar-cta" onClick={closeMenu}>Plan a Trip</Link>
           <button className="navbar-mobile-btn" onClick={toggleMenu} aria-label={menuOpen ? 'Close menu' : 'Open menu'}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
               {menuOpen ? (

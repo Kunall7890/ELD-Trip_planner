@@ -25,7 +25,7 @@ export default function EldLogSheet({ eldDay, dayIndex }) {
       <canvas ref={canvasRef}></canvas>
       <div className="eld-log-actions">
         <button className="eld-log-btn" onClick={handleDownload}>
-          Download PNG
+          <strong>Download</strong> <span className="em">Log Sheet</span> PNG
         </button>
       </div>
     </div>

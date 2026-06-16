@@ -64,13 +64,13 @@ export default function TripPlanner({ onPlanTrip, loading, error, standalone, co
           <div style={{ textAlign: 'center', marginBottom: 40 }}>
             <span className="section-label">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/></svg>
-              Trip Planner
+              <span className="badge-pulse">Trip Planner</span>
             </span>
             <h2 className="section-title">
-              Plan Your <span className="gradient-text">Next Route</span>
+              Plan Your <span className="gradient-text"><span className="em">Next Route</span></span>
             </h2>
             <p className="section-sub" style={{ margin: '0 auto' }}>
-              Enter your stops. We'll handle the HOS compliance.
+              <strong>Enter your stops.</strong> <span className="em">We'll handle the HOS compliance.</span>
             </p>
           </div>
         )}
@@ -109,7 +109,7 @@ export default function TripPlanner({ onPlanTrip, loading, error, standalone, co
             <button type="submit" className="form-submit" disabled={isBusy}>
               {isBusy && <span className="spinner" />}
               {isBusy ? btnText : (
-                <><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/></svg>Plan This Haul</>
+                <><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/></svg><strong>Plan</strong> <span className="em">This Haul</span></>
               )}
             </button>
           </form>

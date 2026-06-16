@@ -147,3 +147,47 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 section { position: relative; }
+
+.em {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.strong {
+  font-weight: 800;
+  color: var(--brown);
+}
+
+.strong-orange {
+  font-weight: 800;
+  color: var(--orange);
+}
+
+.em-gold {
+  font-style: italic;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--orange), var(--orange-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.highlight-box {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(255,122,0,0.08), rgba(255,153,0,0.04));
+  border-left: 3px solid var(--orange);
+  padding: 4px 12px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--brown-light);
+}
+
+.badge-pulse {
+  animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}

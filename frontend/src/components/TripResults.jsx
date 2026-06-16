@@ -16,7 +16,7 @@ export default function TripResults({ result }) {
             <span className="icon" style={{ background: 'rgba(30,64,175,0.1)' }}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" strokeWidth="2"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/></svg>
             </span>
-            Trip Summary
+            <span className="em">Trip</span> <strong>Summary</strong>
           </h2>
           <div className="trip-summary-grid">
             <div className="trip-summary-item">
@@ -51,7 +51,7 @@ export default function TripResults({ result }) {
             <span className="icon" style={{ background: 'rgba(245,158,11,0.1)' }}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
             </span>
-            Route Instructions
+            <strong>Route</strong> <span className="em">Instructions</span>
           </h2>
           <RouteInstructions trip={trip} logs={eld_logs} stops={stops} />
         </div>
@@ -62,7 +62,7 @@ export default function TripResults({ result }) {
               <span className="icon" style={{ background: 'rgba(22,163,74,0.1)' }}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4ade80" strokeWidth="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
               </span>
-              Route Map
+              <span className="em">Route</span> <strong>Map</strong>
             </h2>
             <div className="map-wrapper-result">
               <MapView legs={legs} />
@@ -75,7 +75,7 @@ export default function TripResults({ result }) {
             <span className="icon" style={{ background: 'rgba(168,85,247,0.1)' }}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" strokeWidth="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
             </span>
-            Daily ELD Logs
+            <strong>Daily</strong> <span className="em">ELD Logs</span>
           </h2>
           <EldLogsView logs={eld_logs} />
         </div>

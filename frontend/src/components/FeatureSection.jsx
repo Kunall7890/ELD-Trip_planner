@@ -7,28 +7,28 @@ const features = [
     icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>,
     iconClass: 'f-icon-1',
     title: 'One-Click Route & ELD Sync',
-    desc: 'Enter your stops once. Our engine builds a fully legal route — automatically scheduling driving windows, 30-min breaks, and 10-hour resets. No guesswork. No violations.',
+    desc: <>Enter your stops <em>once</em>. Our engine builds a <strong>fully legal</strong> route — automatically scheduling driving windows, 30-min breaks, and 10-hour resets. <strong>No guesswork. No violations.</strong></>,
     tag: '49 CFR Part 395',
   },
   {
     icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>,
     iconClass: 'f-icon-2',
     title: 'Inspection-Ready Log Sheets',
-    desc: 'Daily FMCSA Form 395 logs generated instantly. Every status — Off Duty, Sleeper, Driving, On Duty — is graphed and ready for download. Show up to every weigh station prepared.',
+    desc: <>Daily <strong>FMCSA Form 395</strong> logs generated <em>instantly</em>. Every status — Off Duty, Sleeper, Driving, On Duty — is graphed and <strong>ready for download</strong>. Show up to <em>every</em> weigh station <strong>prepared</strong>.</>,
     tag: 'Inspection Ready',
   },
   {
     icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>,
     iconClass: 'f-icon-3',
     title: 'Zero-Violation HOS Engine',
-    desc: 'Hard-enforced 11-hour drive limit, 14-hour on-duty window, mandatory 30-min break before the 8th hour, and 70hr/8day cycle tracking. Our math never misses.',
+    desc: <><strong>Hard-enforced</strong> 11-hour drive limit, 14-hour on-duty window, <em>mandatory</em> 30-min break before the 8th hour, and 70hr/8day cycle tracking. <strong>Our math never misses.</strong></>,
     tag: 'Real-Time Compliance',
   },
   {
     icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M4 17h16M12 3v12m-8-4l8-8 8 8"/><rect x="4" y="17" width="16" height="4" rx="1"/></svg>,
     iconClass: 'f-icon-4',
     title: 'Fuel & Load Optimization',
-    desc: 'Auto-inserts fueling stops every 1,000 miles. Schedules pickup and drop-off windows. Everything a long-haul driver needs to keep the wheels turning and the revenue flowing.',
+    desc: <>Auto-inserts fueling stops <strong>every 1,000 miles</strong>. Schedules pickup and drop-off windows. <em>Everything</em> a long-haul driver needs to keep the wheels turning and <strong>the revenue flowing</strong>.</>,
     tag: 'DOT Recommended',
   },
 ];
@@ -53,14 +53,14 @@ export default function FeatureSection() {
         <div className="features-header">
           <span className="section-label">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-            Built for the Cab
+            <span className="badge-pulse">Built for the Cab</span>
           </span>
           <h2 className="section-title">
-            Your <span className="gradient-text">Co-Pilot</span> for the Long Haul
+            Your <span className="gradient-text">Co-Pilot</span> <span className="em">for the Long Haul</span>
           </h2>
           <p className="section-sub">
-            From pretrip to dropoff — every feature engineered to keep you compliant,
-            maximize your drive time, and eliminate paperwork headaches.
+            From <strong>pretrip to dropoff</strong> — every feature engineered to keep you compliant,
+            <em>maximize</em> your drive time, and <strong>eliminate paperwork headaches.</strong>
           </p>
         </div>
 

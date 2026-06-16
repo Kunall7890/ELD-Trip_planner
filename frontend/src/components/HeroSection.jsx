@@ -79,18 +79,18 @@ export default function HeroSection() {
       <div className="hero-content">
         <div className="hero-badge" ref={badgeRef}>
           <span className="dot" />
-          100% FMCSA Compliant · Trusted by Owner-Operators
+          <span className="badge-pulse">100% FMCSA Compliant</span> · Trusted by <strong>2,000+</strong> Owner-Operators
         </div>
 
         <h1 className="hero-title" ref={titleRef}>
-          Haul More.<br />
-          <span className="highlight">Violate Less.</span>
+          Haul <span className="em">More.</span><br />
+          <span className="highlight">Violate <span className="em">Less.</span></span>
         </h1>
 
         <p className="hero-sub" ref={subRef}>
-          Plan HOS-compliant routes in seconds. Auto-generate FMCSA log sheets,
-          nail every 30-min break, and never blow a 14-hour window again.
-          Built by truckers who know the road — and the regulations.
+          <strong className="strong">Plan HOS-compliant routes in seconds.</strong> Auto-generate <em>inspection-ready</em> FMCSA log sheets,
+          nail <strong>every</strong> 30-min break, and <em>never</em> blow a 14-hour window again.
+          <br /><span className="highlight-box">Built by <strong>truckers</strong> who know the road — and the regulations.</span>
         </p>
 
         <div className="hero-actions" ref={actionsRef}>
@@ -102,9 +102,9 @@ export default function HeroSection() {
               <circle cx="18.5" cy="18.5" r="2.5"/>
               <path d="M8 6h6"/>
             </svg>
-            Plan a Trip
+            <strong>Plan</strong> <span className="em">a Trip</span>
           </button>
-          <a href="#features" className="btn-secondary">Explore Features</a>
+          <a href="#features" className="btn-secondary"><span className="em">Explore</span> <strong>Features</strong></a>
         </div>
 
         <div className="hero-stats" ref={statsRef}>
