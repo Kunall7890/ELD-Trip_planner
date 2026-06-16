@@ -9,6 +9,7 @@ venv/
 
 # Django
 backend/db.sqlite3
+backend/staticfiles/
 backend/*/migrations/0001_initial.py
 
 # Node
@@ -29,3 +30,7 @@ Thumbs.db
 # Env
 .env
 .env.local
+
+# Vercel
+api/__pycache__/
+.vercel/
