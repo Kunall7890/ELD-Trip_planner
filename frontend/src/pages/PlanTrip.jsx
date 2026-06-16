@@ -103,7 +103,7 @@ export default function PlanTrip() {
         <div className="container">
           <h1 ref={titleRef}>
             <span className="plan-title-prefix">Plan Your</span><br />
-            <span className="gradient-text gradient-animate"><span className="em">Next Haul</span></span>
+            <span className="gradient-text gradient-animate">Next&nbsp;Haul</span>
           </h1>
           <p ref={subtitleRef} className="plan-subtitle">
             <strong>Enter your trip details.</strong> We'll handle the compliance math.

@@ -70,7 +70,9 @@
   animation: shimmer 4s ease-in-out infinite;
   position: relative;
   display: inline-block;
-  padding: 0 8px;
+  padding: 0 20px 0 0;
+  margin-right: -16px;
+  line-height: 1.15;
 }
 
 @keyframes shimmer {
