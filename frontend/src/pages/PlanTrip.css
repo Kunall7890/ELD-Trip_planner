@@ -12,9 +12,21 @@
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: 100px 24px 40px;
+  padding: 120px 24px 50px;
   width: 100%;
   overflow: hidden;
+}
+
+.plan-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--orange), transparent);
+  border-radius: 2px;
 }
 
 .plan-hero .orb {
@@ -56,6 +68,9 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: shimmer 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 40px rgba(255,122,0,0.15));
+  position: relative;
+  display: inline-block;
 }
 
 @keyframes shimmer {
@@ -63,21 +78,52 @@
   50% { background-position: 100% 50%; }
 }
 
+@keyframes orbFloat {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-20px) scale(1.05); }
+}
+
+.orb-1 { animation: orbFloat 8s ease-in-out infinite; }
+.orb-2 { animation: orbFloat 6s ease-in-out infinite reverse; }
+.orb-3 { animation: orbFloat 10s ease-in-out infinite; }
+
 .plan-hero h1 {
   font-size: clamp(2.8rem, 6vw, 4.5rem);
   font-weight: 900;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   color: var(--brown);
   letter-spacing: -0.03em;
   line-height: 1.08;
 }
 
-.plan-hero p {
+.plan-title-prefix {
+  font-weight: 700;
+  color: var(--brown);
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.plan-hero .plan-subtitle {
+  display: inline-block;
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
   color: var(--brown-light);
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
-  max-width: 520px;
-  margin: 0 auto;
   font-weight: 400;
+  max-width: 520px;
+  margin: 0 auto 4px;
+  line-height: 1.6;
+  background: rgba(255,122,0,0.04);
+  padding: 6px 18px;
+  border-radius: 50px;
+  border: 1px solid rgba(255,122,0,0.08);
+}
+
+.plan-hero .plan-subtitle strong {
+  color: var(--orange);
+  font-weight: 700;
 }
 
 .plan-content {

@@ -102,9 +102,12 @@ export default function PlanTrip() {
         <div className="orb orb-3" />
         <div className="container">
           <h1 ref={titleRef}>
-            Plan Your <span className="gradient-text gradient-animate"><span className="em">Next Haul</span></span>
+            <span className="plan-title-prefix">Plan Your</span><br />
+            <span className="gradient-text gradient-animate"><span className="em">Next Haul</span></span>
           </h1>
-          <p ref={subtitleRef}><strong>Enter your trip details.</strong> <span className="em">We'll handle the compliance math.</span></p>
+          <p ref={subtitleRef} className="plan-subtitle">
+            <strong>Enter your trip details.</strong> We'll handle the compliance math.
+          </p>
         </div>
       </div>
 
