@@ -1,0 +1,36 @@
+.eld-log-sheet {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+  background: #fff;
+}
+
+.eld-log-sheet canvas {
+  display: block;
+}
+
+.eld-log-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  padding: 10px 14px;
+  border-top: 1px solid var(--border);
+}
+
+.eld-log-btn {
+  padding: 7px 16px;
+  background: rgba(255,122,0,0.08);
+  color: var(--orange);
+  border: 1px solid rgba(255,122,0,0.2);
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.eld-log-btn:hover {
+  background: rgba(255,122,0,0.14);
+  border-color: rgba(255,122,0,0.3);
+}

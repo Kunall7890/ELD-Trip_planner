@@ -1,0 +1,93 @@
+.how-section {
+  padding: 120px 24px;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(180deg, var(--cream-alt) 0%, var(--cream) 100%);
+}
+
+.how-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--orange), transparent);
+  opacity: 0.1;
+}
+
+.how-header { margin-bottom: 72px; }
+.how-header .section-sub { margin: 0 auto; }
+
+.how-steps {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.how-step {
+  flex: 1;
+  min-width: 200px;
+  max-width: 240px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.how-step-icon {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  position: relative;
+  z-index: 2;
+}
+
+.how-step:nth-child(1) .how-step-icon { background: rgba(255,122,0,0.1); color: var(--orange); }
+.how-step:nth-child(2) .how-step-icon { background: rgba(255,153,0,0.1); color: var(--orange-light); }
+.how-step:nth-child(3) .how-step-icon { background: rgba(22,163,74,0.1); color: var(--green-light); }
+.how-step:nth-child(4) .how-step-icon { background: rgba(168,85,247,0.1); color: #a78bfa; }
+
+.how-steps::before {
+  content: '';
+  position: absolute;
+  top: 32px;
+  left: 18%;
+  right: 18%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--orange), var(--orange-light), var(--green), #8b5cf6);
+  opacity: 0.1;
+}
+
+@media (max-width: 900px) {
+  .how-steps::before { display: none; }
+  .how-step { max-width: 100%; }
+}
+
+.how-step h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--brown);
+}
+
+.how-step p {
+  font-size: 0.85rem;
+  color: var(--brown-light);
+  line-height: 1.6;
+}
+
+.how-step-num-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  display: block;
+  margin-bottom: 4px;
+  opacity: 0.4;
+  color: var(--brown-light);
+}

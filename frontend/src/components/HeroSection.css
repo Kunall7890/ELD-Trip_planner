@@ -1,0 +1,209 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 100px 24px 60px;
+}
+
+.hero-video-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-video-bg video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(254,253,249,0.85) 0%,
+    rgba(254,253,249,0.6) 50%,
+    rgba(254,253,249,0.85) 100%
+  );
+}
+
+.hero-road {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-road-lines {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--orange) 0px,
+    var(--orange) 40px,
+    transparent 40px,
+    transparent 80px
+  );
+  opacity: 0.2;
+  animation: road-scroll 3s linear infinite;
+}
+
+@keyframes road-scroll {
+  to { transform: translateX(-60px); }
+}
+
+.hero-road-surface {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(237,230,219,0.5) 0%, transparent 100%);
+}
+
+.hero-truck-container {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.hero-truck-container svg {
+  width: 600px;
+  height: auto;
+}
+
+.hero-glow {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 8px;
+  background: radial-gradient(ellipse, rgba(255,122,0,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--orange);
+  background: rgba(255,122,0,0.08);
+  border: 1px solid rgba(255,122,0,0.15);
+  margin-bottom: 28px;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.hero-badge .dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--orange);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.hero-title {
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-weight: 900;
+  line-height: 1.02;
+  margin-bottom: 20px;
+  letter-spacing: -0.03em;
+  opacity: 0;
+  transform: translateY(30px);
+  color: var(--brown);
+}
+
+.hero-title .highlight {
+  background: linear-gradient(135deg, var(--orange), var(--orange-light), var(--orange-deeper));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-sub {
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  color: var(--brown-light);
+  line-height: 1.8;
+  max-width: 620px;
+  margin: 0 auto 36px;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 64px;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.hero-stat { text-align: center; }
+
+.hero-stat .num {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--brown);
+  font-variant-numeric: tabular-nums;
+}
+
+.hero-stat .num-sfx {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--orange);
+}
+
+.hero-stat .lbl {
+  font-size: 0.75rem;
+  color: var(--brown-light);
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .hero-truck-container svg { width: 320px; }
+  .hero-truck-container { bottom: 60px; }
+  .hero-stats { gap: 24px; margin-top: 40px; }
+}

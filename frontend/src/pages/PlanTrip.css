@@ -1,0 +1,242 @@
+.plan-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(ellipse at 20% 20%, rgba(255,122,0,0.03) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 80%, rgba(255,122,0,0.02) 0%, transparent 50%),
+              var(--cream);
+}
+
+.plan-hero {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 100px 24px 40px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.plan-hero .orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.orb-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255,122,0,0.15), transparent);
+  top: -200px;
+  left: -150px;
+}
+
+.orb-2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,153,0,0.1), transparent);
+  bottom: -100px;
+  right: -100px;
+}
+
+.orb-3 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255,122,0,0.08), transparent);
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.gradient-animate {
+  background: linear-gradient(135deg, var(--orange), var(--orange-light), var(--orange-deeper), var(--orange-light));
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.plan-hero h1 {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 900;
+  margin-bottom: 16px;
+  color: var(--brown);
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
+
+.plan-hero p {
+  color: var(--brown-light);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  max-width: 520px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+.plan-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 24px 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.plan-content .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plan-form-area {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.plan-form-area .planner-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.plan-split {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  width: 100%;
+}
+
+.plan-split-form {
+  flex: 0 0 500px;
+}
+
+.plan-split-form .planner-form-card {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  opacity: 1 !important;
+  transform: none !important;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 60px rgba(45, 42, 36, 0.06), 0 1px 3px rgba(45, 42, 36, 0.04);
+  padding: 40px;
+  border-radius: 20px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.plan-split-form .planner-form-card:hover {
+  box-shadow: 0 12px 80px rgba(45, 42, 36, 0.1), 0 1px 3px rgba(45, 42, 36, 0.04);
+  border-color: rgba(255, 122, 0, 0.15);
+}
+
+.plan-split-form .planner-form-card input {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+.plan-split-form .planner-form-card input:focus {
+  background: #fff;
+  border-color: var(--orange);
+  box-shadow: 0 0 0 4px rgba(255, 122, 0, 0.08);
+}
+
+.plan-split-gif {
+  flex: 0 0 400px;
+  max-width: 400px;
+}
+
+.gif-frame {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 48px rgba(45, 42, 36, 0.06), 0 1px 3px rgba(45, 42, 36, 0.04);
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.gif-frame:hover {
+  box-shadow: 0 16px 64px rgba(45, 42, 36, 0.1);
+  transform: translateY(-2px);
+}
+
+.gif-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.plan-results-area {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.plan-new-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(28px);
+  color: var(--brown-light);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.25s ease;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+}
+
+.plan-new-btn:hover {
+  border-color: var(--orange);
+  color: var(--brown);
+  background: rgba(255, 122, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(255, 122, 0, 0.1);
+}
+
+.plan-new-btn:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 3px;
+}
+
+@media (max-width: 960px) {
+  .plan-split {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .plan-split-form {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 500px;
+  }
+  .plan-split-gif {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 500px;
+  }
+  .plan-split-form .planner-form-card {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .plan-split-form .planner-form-card {
+    padding: 20px;
+  }
+}

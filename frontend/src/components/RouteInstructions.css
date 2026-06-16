@@ -1,0 +1,100 @@
+.route-instructions-list {
+  list-style: none;
+  padding: 0;
+}
+
+.instruction-item {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: flex-start;
+}
+
+.instruction-item:last-child { border-bottom: none; }
+
+.instruction-time {
+  min-width: 110px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--brown);
+  font-variant-numeric: tabular-nums;
+}
+
+.instruction-status-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 6px;
+}
+
+.instruction-status-badge.driving { background: rgba(255,122,0,0.12); color: var(--orange); }
+.instruction-status-badge.on_duty { background: rgba(220,38,38,0.1); color: #dc2626; }
+.instruction-status-badge.off_duty { background: rgba(22,163,74,0.1); color: var(--green); }
+.instruction-status-badge.sleeper { background: rgba(147,51,234,0.1); color: #a78bfa; }
+
+.instruction-label {
+  font-size: 0.875rem;
+  color: var(--brown);
+}
+
+.instruction-day-header {
+  font-weight: 700;
+  font-size: 0.9375rem;
+  padding: 16px 0 8px;
+  color: var(--orange-dark);
+}
+
+.instruction-day-header:first-child { padding-top: 0; }
+
+.cycle-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.cycle-stat {
+  text-align: center;
+  padding: 12px 8px;
+  background: var(--cream-alt);
+  border-radius: var(--radius-sm);
+}
+
+.cycle-stat .value {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--orange);
+}
+
+.cycle-stat .value.gold { color: var(--orange-light); }
+
+.cycle-stat .label {
+  font-size: 0.7rem;
+  color: var(--brown-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 2px;
+}
+
+.stops-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.stop-chip {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: var(--brown-light);
+}
