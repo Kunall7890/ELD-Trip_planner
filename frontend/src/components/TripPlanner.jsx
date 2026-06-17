@@ -17,7 +17,7 @@ export default function TripPlanner({ onPlanTrip, loading, error, standalone, co
     if (standalone || inline) return;
     gsap.to(cardRef.current, {
       opacity: 1, y: 0, duration: 1, ease: 'power3.out',
-      scrollTrigger: { trigger: cardRef.current, start: 'top 80%', toggleActions: 'play none none reverse' },
+      scrollTrigger: { trigger: cardRef.current, start: 'top 80%', toggleActions: 'play none none none' },
     });
   }, [standalone, inline]);
 

@@ -25,6 +25,7 @@
   opacity: 0;
   transform: translateY(40px);
   box-shadow: var(--shadow-md);
+  will-change: transform, opacity;
 }
 
 .planner-section.standalone .planner-form-card,

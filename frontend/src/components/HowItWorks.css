@@ -34,6 +34,7 @@
   position: relative;
   opacity: 0;
   transform: translateY(30px);
+  will-change: transform, opacity;
 }
 
 .how-step-icon {

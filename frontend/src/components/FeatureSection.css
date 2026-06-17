@@ -29,12 +29,13 @@
   border-radius: var(--radius);
   background: #fff;
   border: 1px solid var(--border);
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
   position: relative;
   overflow: hidden;
   opacity: 0;
   transform: translateY(40px);
   box-shadow: var(--shadow-sm);
+  will-change: transform, opacity;
 }
 
 .feature-card::before {
@@ -52,6 +53,7 @@
 .feature-card:hover::before { opacity: 1; }
 
 .feature-card:hover {
+  will-change: transform;
   transform: translateY(-6px);
   border-color: rgba(255,122,0,0.2);
   box-shadow: var(--shadow-lg);

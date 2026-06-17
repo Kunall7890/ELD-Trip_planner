@@ -41,7 +41,7 @@ export default function FeatureSection() {
     const ctx = gsap.context(() => {
       gsap.to(cardsRef.current, {
         opacity: 1, y: 0, duration: 0.7, stagger: 0.12, ease: 'power3.out',
-        scrollTrigger: { trigger: sectionRef.current, start: 'top 75%', toggleActions: 'play none none reverse' },
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 75%', toggleActions: 'play none none none' },
       });
     }, sectionRef);
     return () => ctx.revert();
